@@ -1,5 +1,5 @@
 from PyQt6.QtWidgets import QApplication
-from mentor_menu import MentorPage
+from mentors import MentorPage
 
 app = QApplication([])
 window = MentorPage()
