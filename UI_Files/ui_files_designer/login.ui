@@ -70,13 +70,13 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">image: url(:/newPrefix/logoPhoto.png);</string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>logoPhoto.png</pixmap>
+        <pixmap>../logoPhoto.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>

@@ -36,7 +36,7 @@ class Ui_MainWindow(object):
         self.label_2.setGeometry(QtCore.QRect(120, 60, 280, 70))
         self.label_2.setMinimumSize(QtCore.QSize(280, 70))
         self.label_2.setMaximumSize(QtCore.QSize(280, 70))
-        self.label_2.setStyleSheet("image: url(:/newPrefix/logoPhoto.png);")
+        self.label_2.setStyleSheet("")
         self.label_2.setText("")
         self.label_2.setPixmap(QtGui.QPixmap("logoPhoto.png"))
         self.label_2.setScaledContents(True)
