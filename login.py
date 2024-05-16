@@ -20,8 +20,14 @@ class LoginPage(QMainWindow):
         if username == "a" and password == "1":
             self.hide()  
             self.open_menu_window.show()
+        elif not username and not password:
+            self.login_window.labelErrorMessage.setText("<b>Please enter username and passworf</b>")
+        elif not username:
+            self.login_window.labelErrorMessage.setText("<b>Please enter username</b>")
+        elif not password:
+            self.login_window.labelErrorMessage.setText("<b>Please enter password</b>")  
         else:
-            self.login_window.labelErrorMessage.setText("<b>Your email or password is incorrect.</b>")
+            self.login_window.labelErrorMessage.setText("<b>Username or password is incorrect!</b>")
 
 
        

@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(981, 681)
+        MainWindow.resize(726, 681)
         MainWindow.setStyleSheet("QMainWindow{\n"
 " \n"
 "    background-color: rgb(240, 240, 240);\n"
@@ -117,20 +117,6 @@ class Ui_MainWindow(object):
 "}")
         self.lineEditPassword.setEchoMode(QtWidgets.QLineEdit.EchoMode.Password)
         self.lineEditPassword.setObjectName("lineEditPassword")
-        self.frame = QtWidgets.QFrame(parent=self.groupBox)
-        self.frame.setGeometry(QtCore.QRect(0, 130, 521, 60))
-        self.frame.setMinimumSize(QtCore.QSize(521, 60))
-        self.frame.setMaximumSize(QtCore.QSize(521, 60))
-        self.frame.setStyleSheet("")
-        self.frame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
-        self.frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
-        self.frame.setObjectName("frame")
-        self.labelErrorMessage = QtWidgets.QLabel(parent=self.frame)
-        self.labelErrorMessage.setGeometry(QtCore.QRect(30, 45, 461, 31))
-        self.labelErrorMessage.setStyleSheet("color: rgb(255, 0, 0);\n"
-"")
-        self.labelErrorMessage.setText("")
-        self.labelErrorMessage.setObjectName("labelErrorMessage")
         self.frame_2 = QtWidgets.QFrame(parent=self.groupBox)
         self.frame_2.setGeometry(QtCore.QRect(0, 390, 521, 121))
         self.frame_2.setMinimumSize(QtCore.QSize(521, 121))
@@ -165,10 +151,17 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.pushButtonLogin.setObjectName("pushButtonLogin")
+        self.labelErrorMessage = QtWidgets.QLabel(parent=self.groupBox)
+        self.labelErrorMessage.setGeometry(QtCore.QRect(30, 170, 461, 31))
+        self.labelErrorMessage.setStyleSheet("color: rgb(255, 0, 0);\n"
+"")
+        self.labelErrorMessage.setText("")
+        self.labelErrorMessage.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.labelErrorMessage.setObjectName("labelErrorMessage")
         self.horizontalLayout.addWidget(self.groupBox)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 981, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 726, 22))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
