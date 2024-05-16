@@ -32,15 +32,15 @@ class Ui_MainWindow(object):
         self.groupBox.setTitle("")
         self.groupBox.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.groupBox.setObjectName("groupBox")
-        self.label_2 = QtWidgets.QLabel(parent=self.groupBox)
-        self.label_2.setGeometry(QtCore.QRect(120, 60, 280, 70))
-        self.label_2.setMinimumSize(QtCore.QSize(280, 70))
-        self.label_2.setMaximumSize(QtCore.QSize(280, 70))
-        self.label_2.setStyleSheet("")
-        self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("logoPhoto.png"))
-        self.label_2.setScaledContents(True)
-        self.label_2.setObjectName("label_2")
+        self.labelLogo = QtWidgets.QLabel(parent=self.groupBox)
+        self.labelLogo.setGeometry(QtCore.QRect(120, 60, 280, 70))
+        self.labelLogo.setMinimumSize(QtCore.QSize(280, 70))
+        self.labelLogo.setMaximumSize(QtCore.QSize(280, 70))
+        self.labelLogo.setStyleSheet("")
+        self.labelLogo.setText("")
+        self.labelLogo.setPixmap(QtGui.QPixmap("logoPhoto.png"))
+        self.labelLogo.setScaledContents(True)
+        self.labelLogo.setObjectName("labelLogo")
         self.frame_6 = QtWidgets.QFrame(parent=self.groupBox)
         self.frame_6.setGeometry(QtCore.QRect(0, 190, 521, 81))
         self.frame_6.setMinimumSize(QtCore.QSize(521, 81))
@@ -55,14 +55,14 @@ class Ui_MainWindow(object):
         self.label_5.setFont(font)
         self.label_5.setIndent(30)
         self.label_5.setObjectName("label_5")
-        self.lineEdit_3 = QtWidgets.QLineEdit(parent=self.frame_6)
-        self.lineEdit_3.setGeometry(QtCore.QRect(30, 40, 460, 40))
-        self.lineEdit_3.setMinimumSize(QtCore.QSize(460, 40))
-        self.lineEdit_3.setMaximumSize(QtCore.QSize(460, 40))
+        self.lineEditUsername = QtWidgets.QLineEdit(parent=self.frame_6)
+        self.lineEditUsername.setGeometry(QtCore.QRect(30, 40, 460, 40))
+        self.lineEditUsername.setMinimumSize(QtCore.QSize(460, 40))
+        self.lineEditUsername.setMaximumSize(QtCore.QSize(460, 40))
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.lineEdit_3.setFont(font)
-        self.lineEdit_3.setStyleSheet("QLineEdit{\n"
+        self.lineEditUsername.setFont(font)
+        self.lineEditUsername.setStyleSheet("QLineEdit{\n"
 " padding: 10px;\n"
 " border: 1px solid;\n"
 " border-radius: 10px;\n"
@@ -77,8 +77,8 @@ class Ui_MainWindow(object):
 "QLineEdit:focus {\n"
 " border: 2px ridge rgb(50, 50, 50);\n"
 "}")
-        self.lineEdit_3.setEchoMode(QtWidgets.QLineEdit.EchoMode.Normal)
-        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.lineEditUsername.setEchoMode(QtWidgets.QLineEdit.EchoMode.Normal)
+        self.lineEditUsername.setObjectName("lineEditUsername")
         self.frame_5 = QtWidgets.QFrame(parent=self.groupBox)
         self.frame_5.setGeometry(QtCore.QRect(0, 270, 521, 120))
         self.frame_5.setMinimumSize(QtCore.QSize(521, 120))
@@ -93,14 +93,14 @@ class Ui_MainWindow(object):
         self.label_4.setFont(font)
         self.label_4.setIndent(30)
         self.label_4.setObjectName("label_4")
-        self.lineEdit_2 = QtWidgets.QLineEdit(parent=self.frame_5)
-        self.lineEdit_2.setGeometry(QtCore.QRect(30, 40, 460, 40))
-        self.lineEdit_2.setMinimumSize(QtCore.QSize(460, 40))
-        self.lineEdit_2.setMaximumSize(QtCore.QSize(460, 40))
+        self.lineEditPassword = QtWidgets.QLineEdit(parent=self.frame_5)
+        self.lineEditPassword.setGeometry(QtCore.QRect(30, 40, 460, 40))
+        self.lineEditPassword.setMinimumSize(QtCore.QSize(460, 40))
+        self.lineEditPassword.setMaximumSize(QtCore.QSize(460, 40))
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.lineEdit_2.setFont(font)
-        self.lineEdit_2.setStyleSheet("QLineEdit{\n"
+        self.lineEditPassword.setFont(font)
+        self.lineEditPassword.setStyleSheet("QLineEdit{\n"
 " padding: 10px;\n"
 " border: 1px solid;\n"
 " border-radius: 10px;\n"
@@ -115,8 +115,8 @@ class Ui_MainWindow(object):
 "QLineEdit:focus {\n"
 " border: 2px ridge rgb(50, 50, 50);\n"
 "}")
-        self.lineEdit_2.setEchoMode(QtWidgets.QLineEdit.EchoMode.Password)
-        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.lineEditPassword.setEchoMode(QtWidgets.QLineEdit.EchoMode.Password)
+        self.lineEditPassword.setObjectName("lineEditPassword")
         self.frame = QtWidgets.QFrame(parent=self.groupBox)
         self.frame.setGeometry(QtCore.QRect(0, 130, 521, 60))
         self.frame.setMinimumSize(QtCore.QSize(521, 60))
@@ -125,12 +125,12 @@ class Ui_MainWindow(object):
         self.frame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame.setObjectName("frame")
-        self.label = QtWidgets.QLabel(parent=self.frame)
-        self.label.setGeometry(QtCore.QRect(30, 45, 461, 31))
-        self.label.setStyleSheet("color: rgb(255, 0, 0);\n"
+        self.labelErrorMessage = QtWidgets.QLabel(parent=self.frame)
+        self.labelErrorMessage.setGeometry(QtCore.QRect(30, 45, 461, 31))
+        self.labelErrorMessage.setStyleSheet("color: rgb(255, 0, 0);\n"
 "")
-        self.label.setText("")
-        self.label.setObjectName("label")
+        self.labelErrorMessage.setText("")
+        self.labelErrorMessage.setObjectName("labelErrorMessage")
         self.frame_2 = QtWidgets.QFrame(parent=self.groupBox)
         self.frame_2.setGeometry(QtCore.QRect(0, 390, 521, 121))
         self.frame_2.setMinimumSize(QtCore.QSize(521, 121))
@@ -138,14 +138,14 @@ class Ui_MainWindow(object):
         self.frame_2.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_2.setObjectName("frame_2")
-        self.pushButton_2 = QtWidgets.QPushButton(parent=self.frame_2)
-        self.pushButton_2.setGeometry(QtCore.QRect(30, 0, 460, 40))
-        self.pushButton_2.setMaximumSize(QtCore.QSize(460, 40))
+        self.pushButtonLogin = QtWidgets.QPushButton(parent=self.frame_2)
+        self.pushButtonLogin.setGeometry(QtCore.QRect(30, 0, 460, 40))
+        self.pushButtonLogin.setMaximumSize(QtCore.QSize(460, 40))
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(True)
-        self.pushButton_2.setFont(font)
-        self.pushButton_2.setStyleSheet("\n"
+        self.pushButtonLogin.setFont(font)
+        self.pushButtonLogin.setStyleSheet("\n"
 "QPushButton{\n"
 "background-color: rgb(65, 77, 77);\n"
 "color: rgb(255, 255, 255);\n"
@@ -164,7 +164,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "")
-        self.pushButton_2.setObjectName("pushButton_2")
+        self.pushButtonLogin.setObjectName("pushButtonLogin")
         self.horizontalLayout.addWidget(self.groupBox)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
@@ -183,7 +183,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label_5.setText(_translate("MainWindow", "Username"))
         self.label_4.setText(_translate("MainWindow", "Password"))
-        self.pushButton_2.setText(_translate("MainWindow", "Log In"))
+        self.pushButtonLogin.setText(_translate("MainWindow", "Log In"))
 
 
 if __name__ == "__main__":
