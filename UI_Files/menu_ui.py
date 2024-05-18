@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'main_menu_user.ui'
+# Form implementation generated from reading ui file 'main_menu_admin.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #
@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(400, 550)
+        MainWindow.resize(467, 550)
         MainWindow.setMinimumSize(QtCore.QSize(400, 550))
         MainWindow.setStyleSheet("QMainWindow{\n"
 " \n"
@@ -152,6 +152,29 @@ class Ui_MainWindow(object):
 "")
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setObjectName("label")
+        self.pushButtonAdminMenu = QtWidgets.QPushButton(parent=self.frameMenu)
+        self.pushButtonAdminMenu.setGeometry(QtCore.QRect(10, 230, 191, 31))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        font.setBold(False)
+        self.pushButtonAdminMenu.setFont(font)
+        self.pushButtonAdminMenu.setStyleSheet("QPushButton{\n"
+"background-color: rgb(65, 77, 77);\n"
+"color: rgb(255, 255, 255);\n"
+"border-radius: 10px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+" \n"
+" background-color: rgb(90, 100, 100);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+" background-color: white;\n"
+" color: rgb(65, 77, 77);\n"
+" border: 1px solid black;\n"
+"}")
+        self.pushButtonAdminMenu.setObjectName("pushButtonAdminMenu")
         self.verticalLayout_4.addWidget(self.frameMenu)
         spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.verticalLayout_4.addItem(spacerItem1)
@@ -204,7 +227,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.addWidget(self.mainFrame)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 400, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 467, 22))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
@@ -221,6 +244,7 @@ class Ui_MainWindow(object):
         self.pushButtonApplications.setText(_translate("MainWindow", " Applications"))
         self.pushButtonMentorMeetings.setText(_translate("MainWindow", "Mentor Meetings"))
         self.label.setText(_translate("MainWindow", "MAIN MENU"))
+        self.pushButtonAdminMenu.setText(_translate("MainWindow", "Admin Menu"))
         self.pushButtonExit.setText(_translate("MainWindow", "Exit"))
 
 
