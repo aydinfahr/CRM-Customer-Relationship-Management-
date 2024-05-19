@@ -1,7 +1,7 @@
 # from PyQt6.QtWidgets import *  # * gerekli mi?
 from PyQt6.QtWidgets import QMainWindow
 from UI_Files.login_ui import Ui_MainWindow
-import main          #or from main import connection_hub
+
 from menu import MenuPage
 
 
@@ -11,8 +11,10 @@ class LoginPage(QMainWindow):
         super().__init__()
         self.login_window = Ui_MainWindow()
         self.login_window.setupUi(self)
-        self.users = main.connection_hub("Kullanicilar")
+        
         self.is_admin = False
+        self.users = None
+        self.open_menu_window = None
         
 
         self.login_window.pushButtonLogin.clicked.connect(self.login)
@@ -23,7 +25,7 @@ class LoginPage(QMainWindow):
     def login(self):
         username = self.login_window.lineEditUsername.text()
         password = self.login_window.lineEditPassword.text()
-
+        
         for user in self.users[1:]:
             self.is_admin = user[2] == 'admin'
 
