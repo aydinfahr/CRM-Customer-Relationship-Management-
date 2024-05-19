@@ -6,12 +6,10 @@ from UI_Files.menu_ui import Ui_MainWindow
 class MenuPage(QMainWindow):
     def __init__(self, is_admin):
         super().__init__()  ##is_admin parametresi ekleyince hata veriyor
-        self.is_admin = is_admin
         self.menu_window = Ui_MainWindow()
         self.menu_window.setupUi(self)
         
-        
-        ## gecici!
+        self.is_admin = is_admin
         if not self.is_admin:
             self.menu_window.pushButtonAdminMenu.close()
 
@@ -29,19 +27,19 @@ class MenuPage(QMainWindow):
 
     def go_applications_page(self):
         from applications import ApplicationsPage
-        self.open_applications_window = ApplicationsPage()
+        self.open_applications_window = ApplicationsPage(self.is_admin)
         self.hide()
         self.open_applications_window.show()
 
     def go_interviews_page(self):
         from interviews import InterviewsPage
-        self.open_interviews_window = InterviewsPage()
+        self.open_interviews_window = InterviewsPage(self.is_admin)
         self.hide()
         self.open_interviews_window.show()
 
     def go_mentors_page(self):
         from mentors import MentorsPage
-        self.open_mentors_window = MentorsPage()
+        self.open_mentors_window = MentorsPage(self.is_admin)
         self.hide()
         self.open_mentors_window.show()
     
