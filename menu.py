@@ -2,7 +2,6 @@ from PyQt6.QtWidgets import QMainWindow #,QApplication yada *
 from UI_Files.menu_ui import Ui_MainWindow
 
 
-
 class MenuPage(QMainWindow):
     def __init__(self, is_admin):
         super().__init__()  ##is_admin parametresi ekleyince hata veriyor
@@ -12,11 +11,6 @@ class MenuPage(QMainWindow):
         self.is_admin = is_admin
         if not self.is_admin:
             self.menu_window.pushButtonAdminMenu.close()
-
-        self.open_applications_window = None
-        self.open_interviews_window = None
-        self.open_mentors_window = None
-        self.open_management_window = None
 
         self.menu_window.pushButtonApplications.clicked.connect(self.go_applications_page)
         self.menu_window.pushButtonInterviews.clicked.connect(self.go_interviews_page)

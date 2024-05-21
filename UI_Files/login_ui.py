@@ -38,7 +38,7 @@ class Ui_MainWindow(object):
         self.labelLogo.setMaximumSize(QtCore.QSize(280, 70))
         self.labelLogo.setStyleSheet("")
         self.labelLogo.setText("")
-        self.labelLogo.setPixmap(QtGui.QPixmap("logoPhoto.png"))
+        self.labelLogo.setPixmap(QtGui.QPixmap("icons/logoPhoto.png"))
         self.labelLogo.setScaledContents(True)
         self.labelLogo.setObjectName("labelLogo")
         self.frame_6 = QtWidgets.QFrame(parent=self.groupBox)

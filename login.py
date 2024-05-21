@@ -1,22 +1,17 @@
 # from PyQt6.QtWidgets import *  # * gerekli mi?
 from PyQt6.QtWidgets import QMainWindow
 from UI_Files.login_ui import Ui_MainWindow
-
 from menu import MenuPage
 
 
-class LoginPage(QMainWindow):
-     
+class LoginPage(QMainWindow):  
     def __init__(self):
         super().__init__()
         self.login_window = Ui_MainWindow()
         self.login_window.setupUi(self)
-        
         self.is_admin = False
         self.users = None
-        self.open_menu_window = None
         
-
         self.login_window.pushButtonLogin.clicked.connect(self.login)
         #show password eklenebilir
         #enter tusuna basma ile ilgili ozellik eklenebilir

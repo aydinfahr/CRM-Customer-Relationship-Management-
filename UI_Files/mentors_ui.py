@@ -44,7 +44,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setContentsMargins(15, 0, 0, 0)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.frameTopLeft = QtWidgets.QFrame(parent=self.frameLeft)
-        self.frameTopLeft.setMinimumSize(QtCore.QSize(0, 150))
+        self.frameTopLeft.setMinimumSize(QtCore.QSize(0, 210))
         self.frameTopLeft.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frameTopLeft.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frameTopLeft.setObjectName("frameTopLeft")
@@ -56,23 +56,25 @@ class Ui_MainWindow(object):
         self.labelLogo.setMinimumSize(QtCore.QSize(221, 61))
         self.labelLogo.setMaximumSize(QtCore.QSize(221, 61))
         self.labelLogo.setText("")
-        self.labelLogo.setPixmap(QtGui.QPixmap("logoPhoto.png"))
+        self.labelLogo.setPixmap(QtGui.QPixmap("icons/logoPhoto.png"))
         self.labelLogo.setScaledContents(True)
         self.labelLogo.setObjectName("labelLogo")
         self.verticalLayout_5.addWidget(self.labelLogo)
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.verticalLayout_5.addItem(spacerItem)
         self.pushButtonBackMainPage = QtWidgets.QPushButton(parent=self.frameTopLeft)
-        self.pushButtonBackMainPage.setMinimumSize(QtCore.QSize(101, 31))
-        self.pushButtonBackMainPage.setMaximumSize(QtCore.QSize(101, 31))
+        self.pushButtonBackMainPage.setMinimumSize(QtCore.QSize(121, 31))
+        self.pushButtonBackMainPage.setMaximumSize(QtCore.QSize(121, 31))
         font = QtGui.QFont()
+        font.setFamily("Arial Rounded MT Bold")
         font.setPointSize(11)
-        font.setBold(True)
+        font.setBold(False)
         self.pushButtonBackMainPage.setFont(font)
         self.pushButtonBackMainPage.setStyleSheet("QPushButton{\n"
 "background-color: rgb(65, 77, 77);\n"
 "color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
+"letter-spacing: 0.2em;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -91,13 +93,14 @@ class Ui_MainWindow(object):
         spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.verticalLayout_4.addItem(spacerItem1)
         self.frameMenu = QtWidgets.QFrame(parent=self.frameLeft)
-        self.frameMenu.setMinimumSize(QtCore.QSize(221, 330))
+        self.frameMenu.setMinimumSize(QtCore.QSize(221, 250))
         self.frameMenu.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frameMenu.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frameMenu.setObjectName("frameMenu")
         self.pushButtonAllMeetings = QtWidgets.QPushButton(parent=self.frameMenu)
         self.pushButtonAllMeetings.setGeometry(QtCore.QRect(10, 60, 191, 31))
         font = QtGui.QFont()
+        font.setFamily("Arial Rounded MT Bold")
         font.setPointSize(11)
         font.setBold(False)
         self.pushButtonAllMeetings.setFont(font)
@@ -105,6 +108,7 @@ class Ui_MainWindow(object):
 "background-color: rgb(65, 77, 77);\n"
 "color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
+"letter-spacing: 0.2em;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -131,13 +135,15 @@ class Ui_MainWindow(object):
         self.pushButtonExit.setMinimumSize(QtCore.QSize(101, 31))
         self.pushButtonExit.setMaximumSize(QtCore.QSize(101, 31))
         font = QtGui.QFont()
+        font.setFamily("Arial Rounded MT Bold")
         font.setPointSize(11)
-        font.setBold(True)
+        font.setBold(False)
         self.pushButtonExit.setFont(font)
         self.pushButtonExit.setStyleSheet("QPushButton{\n"
 " background-color: rgb(148, 0, 0);\n"
 " color: rgb(255, 255, 255);\n"
 " border-radius: 10px;\n"
+"letter-spacing:0.3em;\n"
 "}\n"
 "QPushButton:hover {\n"
 "  background-color: rgba(157, 9, 19,200);\n"
@@ -164,162 +170,205 @@ class Ui_MainWindow(object):
         self.verticalLayout = QtWidgets.QVBoxLayout(self.frameRight)
         self.verticalLayout.setContentsMargins(0, -1, -1, 0)
         self.verticalLayout.setObjectName("verticalLayout")
+        self.label = QtWidgets.QLabel(parent=self.frameRight)
+        self.label.setMinimumSize(QtCore.QSize(0, 40))
+        self.label.setMaximumSize(QtCore.QSize(16777215, 40))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(16)
+        font.setBold(True)
+        self.label.setFont(font)
+        self.label.setStyleSheet("letter-spacing: 0.2em;\n"
+"color: rgb(60, 70, 70);")
+        self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label.setIndent(-1)
+        self.label.setObjectName("label")
+        self.verticalLayout.addWidget(self.label)
         self.frameTopRight = QtWidgets.QFrame(parent=self.frameRight)
         self.frameTopRight.setMinimumSize(QtCore.QSize(0, 100))
         self.frameTopRight.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.frameTopRight.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frameTopRight.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frameTopRight.setObjectName("frameTopRight")
-        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.frameTopRight)
-        self.verticalLayout_3.setObjectName("verticalLayout_3")
-        self.labelHeader = QtWidgets.QLabel(parent=self.frameTopRight)
-        self.labelHeader.setMinimumSize(QtCore.QSize(300, 30))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(14)
-        font.setBold(True)
-        self.labelHeader.setFont(font)
-        self.labelHeader.setStyleSheet("letter-spacing: 0.1em;\n"
-"color: rgb(70, 70, 70);")
-        self.labelHeader.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.labelHeader.setObjectName("labelHeader")
-        self.verticalLayout_3.addWidget(self.labelHeader)
-        self.frameSearch = QtWidgets.QFrame(parent=self.frameTopRight)
-        self.frameSearch.setMinimumSize(QtCore.QSize(500, 50))
-        self.frameSearch.setMaximumSize(QtCore.QSize(1000, 50))
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.frameTopRight)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem3)
+        self.frame_6 = QtWidgets.QFrame(parent=self.frameTopRight)
+        self.frame_6.setMinimumSize(QtCore.QSize(500, 100))
+        self.frame_6.setMaximumSize(QtCore.QSize(1300, 100))
+        self.frame_6.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame_6.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame_6.setObjectName("frame_6")
+        self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.frame_6)
+        self.verticalLayout_6.setContentsMargins(50, 0, 0, 0)
+        self.verticalLayout_6.setSpacing(0)
+        self.verticalLayout_6.setObjectName("verticalLayout_6")
+        self.frameSearch = QtWidgets.QFrame(parent=self.frame_6)
+        self.frameSearch.setMinimumSize(QtCore.QSize(430, 50))
+        self.frameSearch.setMaximumSize(QtCore.QSize(665, 50))
         self.frameSearch.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frameSearch.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frameSearch.setObjectName("frameSearch")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.frameSearch)
-        self.horizontalLayout.setContentsMargins(30, -1, 0, -1)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, -1)
+        self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.horizontalLayout.addItem(spacerItem3)
         self.lineEditSearch = QtWidgets.QLineEdit(parent=self.frameSearch)
-        self.lineEditSearch.setMinimumSize(QtCore.QSize(400, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lineEditSearch.sizePolicy().hasHeightForWidth())
+        self.lineEditSearch.setSizePolicy(sizePolicy)
+        self.lineEditSearch.setMinimumSize(QtCore.QSize(0, 35))
         self.lineEditSearch.setMaximumSize(QtCore.QSize(600, 30))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.lineEditSearch.setFont(font)
         self.lineEditSearch.setStyleSheet("QLineEdit {\n"
 " background-color: white;\n"
 " border-bottom-left-radius: 10px;\n"
 " border-top-left-radius: 10px;\n"
 " padding-left: 10px;\n"
 " border: 1px solid gray;\n"
-"\n"
+" border-right: none;\n"
 "}\n"
 "\n"
 "QLineEdit:hover {\n"
 "border-color: black;\n"
 "}")
         self.lineEditSearch.setText("")
+        self.lineEditSearch.setClearButtonEnabled(False)
         self.lineEditSearch.setObjectName("lineEditSearch")
         self.horizontalLayout.addWidget(self.lineEditSearch)
         self.pushButtonSearch = QtWidgets.QPushButton(parent=self.frameSearch)
-        self.pushButtonSearch.setMinimumSize(QtCore.QSize(65, 30))
+        self.pushButtonSearch.setMinimumSize(QtCore.QSize(65, 35))
         self.pushButtonSearch.setMaximumSize(QtCore.QSize(65, 30))
         font = QtGui.QFont()
         font.setPointSize(11)
         self.pushButtonSearch.setFont(font)
-        self.pushButtonSearch.setStyleSheet("QPushButton {\n"
-"background-color: rgb(65, 77, 77);\n"
-"color: rgb(255, 255, 255);\n"
+        self.pushButtonSearch.setStyleSheet("\n"
+"\n"
+"QPushButton {\n"
+"\n"
+"\n"
+" background-color: rgb(80, 90, 90);\n"
+"\n"
 " border-bottom-right-radius: 10px;\n"
 " border-top-right-radius: 10px;\n"
 " padding-right: 5px;\n"
+" border: 1px solid rgb(50, 60, 60);\n"
+" border-left: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
 " \n"
-" background-color: rgb(90, 100, 100);\n"
+" background-color: rgb(100, 110, 110);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-" background-color: white;\n"
-" color: rgb(65, 77, 77);\n"
+" background-color: rgb(150, 160, 160);\n"
+" \n"
 " border: 1px solid black;\n"
 "}")
+        self.pushButtonSearch.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("icons/search_white.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonSearch.setIcon(icon)
+        self.pushButtonSearch.setIconSize(QtCore.QSize(20, 20))
         self.pushButtonSearch.setObjectName("pushButtonSearch")
         self.horizontalLayout.addWidget(self.pushButtonSearch)
-        spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.horizontalLayout.addItem(spacerItem4)
-        self.horizontalLayout.setStretch(0, 1)
-        self.horizontalLayout.setStretch(1, 5)
-        self.horizontalLayout.setStretch(2, 1)
-        self.horizontalLayout.setStretch(3, 1)
-        self.verticalLayout_3.addWidget(self.frameSearch)
-        self.frame_6 = QtWidgets.QFrame(parent=self.frameTopRight)
-        self.frame_6.setMinimumSize(QtCore.QSize(500, 40))
-        self.frame_6.setMaximumSize(QtCore.QSize(1000, 40))
-        self.frame_6.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
-        self.frame_6.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
-        self.frame_6.setObjectName("frame_6")
-        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.frame_6)
-        self.horizontalLayout_3.setContentsMargins(32, 5, -1, -1)
-        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
-        spacerItem5 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.horizontalLayout_3.addItem(spacerItem5)
+        self.verticalLayout_6.addWidget(self.frameSearch)
         self.comboBox = QtWidgets.QComboBox(parent=self.frame_6)
-        self.comboBox.setMinimumSize(QtCore.QSize(470, 30))
+        self.comboBox.setMinimumSize(QtCore.QSize(400, 30))
+        self.comboBox.setMaximumSize(QtCore.QSize(665, 30))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.comboBox.setFont(font)
         self.comboBox.setStyleSheet("QComboBox {\n"
 " background-color: white;\n"
-" border-bottom-left-radius: 10px;\n"
-" border-top-left-radius: 10px;\n"
 " padding-left: 10px;\n"
 " border: 1px solid gray;\n"
-"\n"
 "}\n"
 "\n"
 "QComboBox:hover {\n"
 "border-color: black;\n"
 "}")
         self.comboBox.setObjectName("comboBox")
+        self.comboBox.setPlaceholderText("Filter according to...")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
-        self.horizontalLayout_3.addWidget(self.comboBox)
-        spacerItem6 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.horizontalLayout_3.addItem(spacerItem6)
-        self.verticalLayout_3.addWidget(self.frame_6)
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.verticalLayout_6.addWidget(self.comboBox)
+        self.horizontalLayout_3.addWidget(self.frame_6)
+        self.horizontalLayout_3.setStretch(0, 1)
+        self.horizontalLayout_3.setStretch(1, 3)
         self.verticalLayout.addWidget(self.frameTopRight)
         self.tableWidget = QtWidgets.QTableWidget(parent=self.frameRight)
         font = QtGui.QFont()
+        font.setFamily("Segoe UI")
         font.setPointSize(9)
         font.setBold(False)
         self.tableWidget.setFont(font)
+        self.tableWidget.setStyleSheet("color: rgb(50, 60, 60);")
         self.tableWidget.setObjectName("tableWidget")
-        self.tableWidget.setColumnCount(6)
+        self.tableWidget.setColumnCount(8)
         self.tableWidget.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignVCenter)
         font = QtGui.QFont()
         font.setBold(True)
         item.setFont(font)
         self.tableWidget.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignVCenter)
         font = QtGui.QFont()
         font.setBold(True)
         item.setFont(font)
         self.tableWidget.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignVCenter)
         font = QtGui.QFont()
         font.setBold(True)
         item.setFont(font)
         self.tableWidget.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignVCenter)
         font = QtGui.QFont()
         font.setBold(True)
         item.setFont(font)
         self.tableWidget.setHorizontalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignVCenter)
         font = QtGui.QFont()
         font.setBold(True)
         item.setFont(font)
         self.tableWidget.setHorizontalHeaderItem(4, item)
         item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignVCenter)
         font = QtGui.QFont()
         font.setBold(True)
         item.setFont(font)
         self.tableWidget.setHorizontalHeaderItem(5, item)
+        item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        font = QtGui.QFont()
+        font.setBold(True)
+        item.setFont(font)
+        self.tableWidget.setHorizontalHeaderItem(6, item)
+        item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        font = QtGui.QFont()
+        font.setBold(True)
+        item.setFont(font)
+        self.tableWidget.setHorizontalHeaderItem(7, item)
         self.verticalLayout.addWidget(self.tableWidget)
+        self.verticalLayout.setStretch(2, 1)
         self.horizontalLayout_2.addWidget(self.frameRight)
         self.verticalLayout_2.addWidget(self.mainFrame)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -340,23 +389,32 @@ class Ui_MainWindow(object):
         self.pushButtonBackMainPage.setText(_translate("MainWindow", "<  Main Page"))
         self.pushButtonAllMeetings.setText(_translate("MainWindow", "All Meetings"))
         self.pushButtonExit.setText(_translate("MainWindow", "Exit"))
-        self.labelHeader.setText(_translate("MainWindow", "MENTOR MEETINGS"))
-        self.pushButtonSearch.setText(_translate("MainWindow", "Search"))
-        self.comboBox.setItemText(0, _translate("MainWindow", "VIT Projesinin Tamamina Katilmasi Uygun Olur"))
-        self.comboBox.setItemText(1, _translate("MainWindow", "VIT Projesinin ilk IT Egitimi Alanina Yonlendirilmesi Uygun Olur"))
-        self.comboBox.setItemText(2, _translate("MainWindow", "VIT Projesinin INgilizce Egitim Alanini Yonlendirilmesi Uygun Olur"))
-        self.comboBox.setItemText(3, _translate("MainWindow", "VIT Projesi Kapsaminda..."))
+        self.label.setText(_translate("MainWindow", "MENTOR MEETINGS"))
+        self.lineEditSearch.setPlaceholderText(_translate("MainWindow", "Search"))
+        self.comboBox.setPlaceholderText(_translate("MainWindow", "Filter according to..."))
+        self.comboBox.setItemText(0, _translate("MainWindow", "  VIT projesinin tamamına katılması uygun olur"))
+        self.comboBox.setItemText(1, _translate("MainWindow", "  Bir Sonra Vit Projesine Katilmasi Uygun Olur."))
+        self.comboBox.setItemText(2, _translate("MainWindow", "  VIT Projesinin Ilk IT Egitimi Al... a Yonlendirimesi Uygundur."))
+        self.comboBox.setItemText(3, _translate("MainWindow", "  VIT projesi ilk IT eğitimi alıp ITPH a yönlendirilmesi uygun olur"))
+        self.comboBox.setItemText(4, _translate("MainWindow", "  VIT projesi kapsamında direkt ITPH a yönlendirilmesi uygun olur."))
+        self.comboBox.setItemText(5, _translate("MainWindow", "  VIT projesi ingilizce eğitimi alıp ITPH a yönlendirilmesi uygun olur"))
+        self.comboBox.setItemText(6, _translate("MainWindow", "  Direk Bireysel Kocluk Ile Ise yonlendirilmesi Uygundur."))
+        self.comboBox.setItemText(7, _translate("MainWindow", "  Diger"))
         item = self.tableWidget.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "Meeting Date"))
         item = self.tableWidget.horizontalHeaderItem(1)
-        item.setText(_translate("MainWindow", "Candidate Name"))
+        item.setText(_translate("MainWindow", "Applicant Name"))
         item = self.tableWidget.horizontalHeaderItem(2)
         item.setText(_translate("MainWindow", "Mentor"))
         item = self.tableWidget.horizontalHeaderItem(3)
         item.setText(_translate("MainWindow", "IT Knowledge"))
         item = self.tableWidget.horizontalHeaderItem(4)
-        item.setText(_translate("MainWindow", "Availability"))
+        item.setText(_translate("MainWindow", "Other"))
         item = self.tableWidget.horizontalHeaderItem(5)
+        item.setText(_translate("MainWindow", "What do you think about he applicant?"))
+        item = self.tableWidget.horizontalHeaderItem(6)
+        item.setText(_translate("MainWindow", "Availability"))
+        item = self.tableWidget.horizontalHeaderItem(7)
         item.setText(_translate("MainWindow", "Comments"))
 
 

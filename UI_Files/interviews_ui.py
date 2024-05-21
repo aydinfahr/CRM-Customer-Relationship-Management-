@@ -56,7 +56,7 @@ class Ui_MainWindow(object):
         self.labelLogo.setMinimumSize(QtCore.QSize(221, 61))
         self.labelLogo.setMaximumSize(QtCore.QSize(221, 61))
         self.labelLogo.setText("")
-        self.labelLogo.setPixmap(QtGui.QPixmap("logoPhoto.png"))
+        self.labelLogo.setPixmap(QtGui.QPixmap("icons/logoPhoto.png"))
         self.labelLogo.setScaledContents(True)
         self.labelLogo.setObjectName("labelLogo")
         self.verticalLayout_5.addWidget(self.labelLogo)

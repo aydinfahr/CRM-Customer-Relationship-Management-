@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/search-12-512.png</file>
+    <file>icons/logo_icon.png</file>
+    <file>icons/logo_icon_bw.png</file>
+    <file>icons/logoPhoto.png</file>
+    <file>icons/search_icon.png</file>
+  </qresource>
+</RCC>

@@ -6,13 +6,13 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>467</width>
+    <width>650</width>
     <height>550</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>400</width>
+    <width>650</width>
     <height>550</height>
    </size>
   </property>
@@ -153,6 +153,9 @@
                  <width>221</width>
                  <height>61</height>
                 </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">image: url(:/logo/logoPhoto.png);</string>
                </property>
                <property name="text">
                 <string/>
@@ -471,7 +474,8 @@ QPushButton:pressed {
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: white;</string>
+          <string notr="true">background-color: white;
+image: url(:/logo/logo_icon_bw.png);</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -505,13 +509,15 @@ QPushButton:pressed {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>467</width>
+     <width>650</width>
      <height>22</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../logoPhoto.qrc"/>
+ </resources>
  <connections/>
 </ui>

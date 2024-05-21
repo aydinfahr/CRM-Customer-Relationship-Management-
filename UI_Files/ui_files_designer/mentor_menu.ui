@@ -97,7 +97,7 @@
             <property name="minimumSize">
              <size>
               <width>0</width>
-              <height>150</height>
+              <height>210</height>
              </size>
             </property>
             <property name="frameShape">
@@ -106,7 +106,7 @@
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QVBoxLayout" name="verticalLayout_5">
+            <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,0,0">
              <property name="spacing">
               <number>6</number>
              </property>
@@ -137,7 +137,7 @@
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap>logoPhoto.png</pixmap>
+                <pixmap>../../icons/logoPhoto.png</pixmap>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -161,20 +161,21 @@
               <widget class="QPushButton" name="pushButtonBackMainPage">
                <property name="minimumSize">
                 <size>
-                 <width>101</width>
+                 <width>121</width>
                  <height>31</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>101</width>
+                 <width>121</width>
                  <height>31</height>
                 </size>
                </property>
                <property name="font">
                 <font>
+                 <family>Arial Rounded MT Bold</family>
                  <pointsize>11</pointsize>
-                 <bold>true</bold>
+                 <bold>false</bold>
                 </font>
                </property>
                <property name="styleSheet">
@@ -182,6 +183,7 @@
 background-color: rgb(65, 77, 77);
 color: rgb(255, 255, 255);
 border-radius: 10px;
+letter-spacing: 0.2em;
 }
 
 QPushButton:hover {
@@ -221,7 +223,7 @@ QPushButton:pressed{
             <property name="minimumSize">
              <size>
               <width>221</width>
-              <height>330</height>
+              <height>250</height>
              </size>
             </property>
             <property name="frameShape">
@@ -241,6 +243,7 @@ QPushButton:pressed{
              </property>
              <property name="font">
               <font>
+               <family>Arial Rounded MT Bold</family>
                <pointsize>11</pointsize>
                <bold>false</bold>
               </font>
@@ -250,6 +253,7 @@ QPushButton:pressed{
 background-color: rgb(65, 77, 77);
 color: rgb(255, 255, 255);
 border-radius: 10px;
+letter-spacing: 0.2em;
 }
 
 QPushButton:hover {
@@ -319,8 +323,9 @@ QPushButton:pressed{
              </property>
              <property name="font">
               <font>
+               <family>Arial Rounded MT Bold</family>
                <pointsize>11</pointsize>
-               <bold>true</bold>
+               <bold>false</bold>
               </font>
              </property>
              <property name="styleSheet">
@@ -328,6 +333,7 @@ QPushButton:pressed{
  background-color: rgb(148, 0, 0);
  color: rgb(255, 255, 255);
  border-radius: 10px;
+letter-spacing:0.3em;
 }
 QPushButton:hover {
   background-color: rgba(157, 9, 19,200);
@@ -367,13 +373,49 @@ QPushButton:pressed {
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <layout class="QVBoxLayout" name="verticalLayout">
+         <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,1">
           <property name="leftMargin">
            <number>0</number>
           </property>
           <property name="bottomMargin">
            <number>0</number>
           </property>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>16</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">letter-spacing: 0.2em;
+color: rgb(60, 70, 70);</string>
+            </property>
+            <property name="text">
+             <string>MENTOR MEETINGS</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="indent">
+             <number>-1</number>
+            </property>
+           </widget>
+          </item>
           <item>
            <widget class="QFrame" name="frameTopRight">
             <property name="minimumSize">
@@ -391,46 +433,32 @@ QPushButton:pressed {
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QVBoxLayout" name="verticalLayout_3">
+            <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,3">
              <item>
-              <widget class="QLabel" name="labelHeader">
-               <property name="minimumSize">
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
                 <size>
-                 <width>300</width>
-                 <height>30</height>
+                 <width>40</width>
+                 <height>20</height>
                 </size>
                </property>
-               <property name="font">
-                <font>
-                 <family>Arial</family>
-                 <pointsize>14</pointsize>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">letter-spacing: 0.1em;
-color: rgb(70, 70, 70);</string>
-               </property>
-               <property name="text">
-                <string>MENTOR MEETINGS</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
+              </spacer>
              </item>
              <item>
-              <widget class="QFrame" name="frameSearch">
+              <widget class="QFrame" name="frame_6">
                <property name="minimumSize">
                 <size>
                  <width>500</width>
-                 <height>50</height>
+                 <height>100</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>1000</width>
-                 <height>50</height>
+                 <width>1300</width>
+                 <height>100</height>
                 </size>
                </property>
                <property name="frameShape">
@@ -439,42 +467,82 @@ color: rgb(70, 70, 70);</string>
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,5,1,1">
+               <layout class="QVBoxLayout" name="verticalLayout_6">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
                 <property name="leftMargin">
-                 <number>30</number>
+                 <number>50</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
                 </property>
                 <property name="rightMargin">
                  <number>0</number>
                 </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
                 <item>
-                 <spacer name="horizontalSpacer">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEditSearch">
+                 <widget class="QFrame" name="frameSearch">
                   <property name="minimumSize">
                    <size>
-                    <width>400</width>
-                    <height>30</height>
+                    <width>430</width>
+                    <height>50</height>
                    </size>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>600</width>
-                    <height>30</height>
+                    <width>665</width>
+                    <height>50</height>
                    </size>
                   </property>
-                  <property name="styleSheet">
-                   <string notr="true">QLineEdit {
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QLineEdit" name="lineEditSearch">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>35</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>600</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QLineEdit {
  background-color: white;
  border-bottom-left-radius: 10px;
  border-top-left-radius: 10px;
@@ -486,168 +554,154 @@ color: rgb(70, 70, 70);</string>
 QLineEdit:hover {
 border-color: black;
 }</string>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="pushButtonSearch">
-                  <property name="minimumSize">
-                   <size>
-                    <width>65</width>
-                    <height>30</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>65</width>
-                    <height>30</height>
-                   </size>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>11</pointsize>
-                   </font>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">QPushButton {
-background-color: rgb(65, 77, 77);
-color: rgb(255, 255, 255);
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Search</string>
+                     </property>
+                     <property name="clearButtonEnabled">
+                      <bool>false</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButtonSearch">
+                     <property name="minimumSize">
+                      <size>
+                       <width>65</width>
+                       <height>35</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>65</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>11</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">
+
+QPushButton {
+
+
+ background-color: rgb(80, 90, 90);
+
  border-bottom-right-radius: 10px;
  border-top-right-radius: 10px;
  padding-right: 5px;
+ border: 1px solid rgb(50, 60, 60);
 }
 
 QPushButton:hover {
  
- background-color: rgb(90, 100, 100);
+ background-color: rgb(100, 110, 110);
 }
 
 QPushButton:pressed{
  background-color: white;
- color: rgb(65, 77, 77);
+ 
  border: 1px solid black;
 }</string>
-                  </property>
-                  <property name="text">
-                   <string>Search</string>
-                  </property>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="icon">
+                      <iconset>
+                       <normaloff>../../icons/search_white.png</normaloff>../../icons/search_white.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>20</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
                  </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_2">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item>
-              <widget class="QFrame" name="frame_6">
-               <property name="minimumSize">
-                <size>
-                 <width>500</width>
-                 <height>40</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>1000</width>
-                 <height>40</height>
-                </size>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_3">
-                <property name="leftMargin">
-                 <number>32</number>
-                </property>
-                <property name="topMargin">
-                 <number>5</number>
-                </property>
-                <item>
-                 <spacer name="horizontalSpacer_3">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
                 </item>
                 <item>
                  <widget class="QComboBox" name="comboBox">
                   <property name="minimumSize">
                    <size>
-                    <width>470</width>
+                    <width>400</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>665</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
                   </property>
                   <property name="styleSheet">
                    <string notr="true">QComboBox {
  background-color: white;
- border-bottom-left-radius: 10px;
- border-top-left-radius: 10px;
  padding-left: 10px;
  border: 1px solid gray;
-
 }
 
 QComboBox:hover {
 border-color: black;
 }</string>
                   </property>
+                  <property name="placeholderText">
+                   <string>Filter according to...</string>
+                  </property>
                   <item>
                    <property name="text">
-                    <string>VIT Projesinin Tamamina Katilmasi Uygun Olur</string>
+                    <string>  VIT projesinin tamamına katılması uygun olur</string>
                    </property>
                   </item>
                   <item>
                    <property name="text">
-                    <string>VIT Projesinin ilk IT Egitimi Alanina Yonlendirilmesi Uygun Olur</string>
+                    <string>  Bir Sonra Vit Projesine Katilmasi Uygun Olur.</string>
                    </property>
                   </item>
                   <item>
                    <property name="text">
-                    <string>VIT Projesinin INgilizce Egitim Alanini Yonlendirilmesi Uygun Olur</string>
+                    <string>  VIT Projesinin Ilk IT Egitimi Al... a Yonlendirimesi Uygundur.</string>
                    </property>
                   </item>
                   <item>
                    <property name="text">
-                    <string>VIT Projesi Kapsaminda...</string>
+                    <string>  VIT projesi ilk IT eğitimi alıp ITPH a yönlendirilmesi uygun olur</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>  VIT projesi kapsamında direkt ITPH a yönlendirilmesi uygun olur.</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>  VIT projesi ingilizce eğitimi alıp ITPH a yönlendirilmesi uygun olur</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>  Direk Bireysel Kocluk Ile Ise yonlendirilmesi Uygundur.</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>  Diger</string>
                    </property>
                   </item>
                  </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_4">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
                 </item>
                </layout>
               </widget>
@@ -656,12 +710,16 @@ border-color: black;
            </widget>
           </item>
           <item>
-           <widget class="QTableWidget" name="tableWidgetCandidates">
+           <widget class="QTableWidget" name="tableWidget">
             <property name="font">
              <font>
+              <family>Segoe UI</family>
               <pointsize>9</pointsize>
               <bold>false</bold>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(50, 60, 60);</string>
             </property>
             <column>
              <property name="text">
@@ -672,15 +730,21 @@ border-color: black;
                <bold>true</bold>
               </font>
              </property>
+             <property name="textAlignment">
+              <set>AlignLeading|AlignVCenter</set>
+             </property>
             </column>
             <column>
              <property name="text">
-              <string>Candidate Name</string>
+              <string>Applicant Name</string>
              </property>
              <property name="font">
               <font>
                <bold>true</bold>
               </font>
+             </property>
+             <property name="textAlignment">
+              <set>AlignLeading|AlignVCenter</set>
              </property>
             </column>
             <column>
@@ -692,6 +756,9 @@ border-color: black;
                <bold>true</bold>
               </font>
              </property>
+             <property name="textAlignment">
+              <set>AlignLeading|AlignVCenter</set>
+             </property>
             </column>
             <column>
              <property name="text">
@@ -701,6 +768,35 @@ border-color: black;
               <font>
                <bold>true</bold>
               </font>
+             </property>
+             <property name="textAlignment">
+              <set>AlignLeading|AlignVCenter</set>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Other</string>
+             </property>
+             <property name="font">
+              <font>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="textAlignment">
+              <set>AlignLeading|AlignVCenter</set>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>What do you think about he applicant?</string>
+             </property>
+             <property name="font">
+              <font>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="textAlignment">
+              <set>AlignLeading|AlignVCenter</set>
              </property>
             </column>
             <column>
@@ -712,6 +808,9 @@ border-color: black;
                <bold>true</bold>
               </font>
              </property>
+             <property name="textAlignment">
+              <set>AlignLeading|AlignVCenter</set>
+             </property>
             </column>
             <column>
              <property name="text">
@@ -721,6 +820,9 @@ border-color: black;
               <font>
                <bold>true</bold>
               </font>
+             </property>
+             <property name="textAlignment">
+              <set>AlignLeading|AlignVCenter</set>
              </property>
             </column>
            </widget>
