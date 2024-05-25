@@ -7,8 +7,14 @@ class MenuPage(QMainWindow):
         super().__init__()  ##is_admin parametresi ekleyince hata veriyor
         self.menu_window = Ui_MainWindow()
         self.menu_window.setupUi(self)
+
+        self.applications_window = None
+        self.interviews_window = None
+        self.mentors_window = None
+        self.management_window = None
         
         self.is_admin = is_admin
+        # If the current user is not an admin, hide the admin menu button
         if not self.is_admin:
             self.menu_window.pushButtonAdminMenu.close()
 
@@ -21,9 +27,10 @@ class MenuPage(QMainWindow):
 
     def go_applications_page(self):
         from applications import ApplicationsPage
-        self.open_applications_window = ApplicationsPage(self.is_admin)
+        if self.applications_window is None:
+            self.applications_window = ApplicationsPage(self.is_admin)
+        self.applications_window.show()
         self.hide()
-        self.open_applications_window.show()
 
     def go_interviews_page(self):
         from interviews import InterviewsPage

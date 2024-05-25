@@ -44,7 +44,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setContentsMargins(15, 0, 0, 0)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.frameTopLeft = QtWidgets.QFrame(parent=self.frameLeft)
-        self.frameTopLeft.setMinimumSize(QtCore.QSize(0, 150))
+        self.frameTopLeft.setMinimumSize(QtCore.QSize(0, 210))
         self.frameTopLeft.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frameTopLeft.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frameTopLeft.setObjectName("frameTopLeft")
@@ -63,20 +63,21 @@ class Ui_MainWindow(object):
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.verticalLayout_5.addItem(spacerItem)
         self.pushButtonBackMainPage = QtWidgets.QPushButton(parent=self.frameTopLeft)
-        self.pushButtonBackMainPage.setMinimumSize(QtCore.QSize(101, 31))
-        self.pushButtonBackMainPage.setMaximumSize(QtCore.QSize(101, 31))
+        self.pushButtonBackMainPage.setMinimumSize(QtCore.QSize(121, 31))
+        self.pushButtonBackMainPage.setMaximumSize(QtCore.QSize(121, 31))
         font = QtGui.QFont()
+        font.setFamily("Arial Rounded MT Bold")
         font.setPointSize(11)
-        font.setBold(True)
+        font.setBold(False)
         self.pushButtonBackMainPage.setFont(font)
         self.pushButtonBackMainPage.setStyleSheet("QPushButton{\n"
 "background-color: rgb(65, 77, 77);\n"
 "color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
+"letter-spacing: 0.2em;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-" \n"
 " background-color: rgb(90, 100, 100);\n"
 "}\n"
 "\n"
@@ -88,8 +89,6 @@ class Ui_MainWindow(object):
         self.pushButtonBackMainPage.setObjectName("pushButtonBackMainPage")
         self.verticalLayout_5.addWidget(self.pushButtonBackMainPage)
         self.verticalLayout_4.addWidget(self.frameTopLeft)
-        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
-        self.verticalLayout_4.addItem(spacerItem1)
         self.frameMenu = QtWidgets.QFrame(parent=self.frameLeft)
         self.frameMenu.setMinimumSize(QtCore.QSize(221, 330))
         self.frameMenu.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
@@ -98,6 +97,7 @@ class Ui_MainWindow(object):
         self.pushButtonSendMail = QtWidgets.QPushButton(parent=self.frameMenu)
         self.pushButtonSendMail.setGeometry(QtCore.QRect(10, 150, 191, 31))
         font = QtGui.QFont()
+        font.setFamily("Arial Rounded MT Bold")
         font.setPointSize(11)
         font.setBold(False)
         self.pushButtonSendMail.setFont(font)
@@ -105,10 +105,10 @@ class Ui_MainWindow(object):
 "background-color: rgb(65, 77, 77);\n"
 "color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
+"letter-spacing: 0.3em;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-" \n"
 " background-color: rgb(90, 100, 100);\n"
 "}\n"
 "\n"
@@ -121,17 +121,17 @@ class Ui_MainWindow(object):
         self.pushButtonAllEvents = QtWidgets.QPushButton(parent=self.frameMenu)
         self.pushButtonAllEvents.setGeometry(QtCore.QRect(10, 70, 191, 31))
         font = QtGui.QFont()
+        font.setFamily("Arial Rounded MT Bold")
         font.setPointSize(11)
-        font.setBold(False)
         self.pushButtonAllEvents.setFont(font)
         self.pushButtonAllEvents.setStyleSheet("QPushButton{\n"
 "background-color: rgb(65, 77, 77);\n"
 "color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
+"letter-spacing: 0.3em;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-" \n"
 " background-color: rgb(90, 100, 100);\n"
 "}\n"
 "\n"
@@ -142,8 +142,8 @@ class Ui_MainWindow(object):
 "}")
         self.pushButtonAllEvents.setObjectName("pushButtonAllEvents")
         self.verticalLayout_4.addWidget(self.frameMenu)
-        spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
-        self.verticalLayout_4.addItem(spacerItem2)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.verticalLayout_4.addItem(spacerItem1)
         self.frameLeftBottom = QtWidgets.QFrame(parent=self.frameLeft)
         self.frameLeftBottom.setMinimumSize(QtCore.QSize(0, 45))
         self.frameLeftBottom.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
@@ -154,13 +154,15 @@ class Ui_MainWindow(object):
         self.pushButtonExit.setMinimumSize(QtCore.QSize(101, 31))
         self.pushButtonExit.setMaximumSize(QtCore.QSize(101, 31))
         font = QtGui.QFont()
+        font.setFamily("Arial Rounded MT Bold")
         font.setPointSize(11)
-        font.setBold(True)
+        font.setBold(False)
         self.pushButtonExit.setFont(font)
         self.pushButtonExit.setStyleSheet("QPushButton{\n"
 " background-color: rgb(148, 0, 0);\n"
 " color: rgb(255, 255, 255);\n"
 " border-radius: 10px;\n"
+" letter-spacing: 0.3em;\n"
 "}\n"
 "QPushButton:hover {\n"
 "  background-color: rgba(157, 9, 19,200);\n"
@@ -199,76 +201,108 @@ class Ui_MainWindow(object):
         self.labelHeader.setMinimumSize(QtCore.QSize(300, 30))
         font = QtGui.QFont()
         font.setFamily("Arial")
-        font.setPointSize(14)
+        font.setPointSize(18)
         font.setBold(True)
         self.labelHeader.setFont(font)
-        self.labelHeader.setStyleSheet("letter-spacing: 0.2em;\n"
+        self.labelHeader.setStyleSheet("letter-spacing: 0.5em;\n"
 "color: rgb(70, 70, 70);")
         self.labelHeader.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.labelHeader.setObjectName("labelHeader")
         self.verticalLayout_3.addWidget(self.labelHeader)
-        self.frameSearch = QtWidgets.QFrame(parent=self.frameTopRight)
-        self.frameSearch.setMinimumSize(QtCore.QSize(500, 50))
-        self.frameSearch.setMaximumSize(QtCore.QSize(1000, 50))
-        self.frameSearch.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
-        self.frameSearch.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
-        self.frameSearch.setObjectName("frameSearch")
-        self.horizontalLayout = QtWidgets.QHBoxLayout(self.frameSearch)
-        self.horizontalLayout.setContentsMargins(30, -1, 0, -1)
-        self.horizontalLayout.setObjectName("horizontalLayout")
-        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.horizontalLayout.addItem(spacerItem3)
-        self.lineEditSearch = QtWidgets.QLineEdit(parent=self.frameSearch)
-        self.lineEditSearch.setMinimumSize(QtCore.QSize(400, 30))
+        self.frameTopRight_2 = QtWidgets.QFrame(parent=self.frameTopRight)
+        self.frameTopRight_2.setMinimumSize(QtCore.QSize(0, 50))
+        self.frameTopRight_2.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
+        self.frameTopRight_2.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frameTopRight_2.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frameTopRight_2.setObjectName("frameTopRight_2")
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.frameTopRight_2)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem2)
+        self.frame_6 = QtWidgets.QFrame(parent=self.frameTopRight_2)
+        self.frame_6.setMinimumSize(QtCore.QSize(500, 50))
+        self.frame_6.setMaximumSize(QtCore.QSize(1300, 50))
+        self.frame_6.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame_6.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame_6.setObjectName("frame_6")
+        self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.frame_6)
+        self.verticalLayout_6.setContentsMargins(50, 0, 0, 0)
+        self.verticalLayout_6.setSpacing(0)
+        self.verticalLayout_6.setObjectName("verticalLayout_6")
+        self.frameSearch_2 = QtWidgets.QFrame(parent=self.frame_6)
+        self.frameSearch_2.setMinimumSize(QtCore.QSize(430, 50))
+        self.frameSearch_2.setMaximumSize(QtCore.QSize(665, 50))
+        self.frameSearch_2.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frameSearch_2.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frameSearch_2.setObjectName("frameSearch_2")
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.frameSearch_2)
+        self.horizontalLayout_4.setContentsMargins(0, 0, 0, -1)
+        self.horizontalLayout_4.setSpacing(0)
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.lineEditSearch = QtWidgets.QLineEdit(parent=self.frameSearch_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lineEditSearch.sizePolicy().hasHeightForWidth())
+        self.lineEditSearch.setSizePolicy(sizePolicy)
+        self.lineEditSearch.setMinimumSize(QtCore.QSize(0, 35))
         self.lineEditSearch.setMaximumSize(QtCore.QSize(600, 30))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.lineEditSearch.setFont(font)
         self.lineEditSearch.setStyleSheet("QLineEdit {\n"
 " background-color: white;\n"
 " border-bottom-left-radius: 10px;\n"
 " border-top-left-radius: 10px;\n"
 " padding-left: 10px;\n"
 " border: 1px solid gray;\n"
-"\n"
+" border-right: none;\n"
 "}\n"
 "\n"
 "QLineEdit:hover {\n"
 "border-color: black;\n"
 "}")
         self.lineEditSearch.setText("")
+        self.lineEditSearch.setClearButtonEnabled(False)
         self.lineEditSearch.setObjectName("lineEditSearch")
-        self.horizontalLayout.addWidget(self.lineEditSearch)
-        self.pushButtonSearch = QtWidgets.QPushButton(parent=self.frameSearch)
-        self.pushButtonSearch.setMinimumSize(QtCore.QSize(65, 30))
+        self.horizontalLayout_4.addWidget(self.lineEditSearch)
+        self.pushButtonSearch = QtWidgets.QPushButton(parent=self.frameSearch_2)
+        self.pushButtonSearch.setMinimumSize(QtCore.QSize(65, 35))
         self.pushButtonSearch.setMaximumSize(QtCore.QSize(65, 30))
         font = QtGui.QFont()
         font.setPointSize(11)
         self.pushButtonSearch.setFont(font)
-        self.pushButtonSearch.setStyleSheet("QPushButton {\n"
-"background-color: rgb(65, 77, 77);\n"
-"color: rgb(255, 255, 255);\n"
+        self.pushButtonSearch.setStyleSheet("\n"
+"\n"
+"QPushButton {\n"
+" background-color: rgb(80, 90, 90);\n"
 " border-bottom-right-radius: 10px;\n"
 " border-top-right-radius: 10px;\n"
 " padding-right: 5px;\n"
+" border: 1px solid rgb(50, 60, 60);\n"
+" border-left:none;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-" \n"
-" background-color: rgb(90, 100, 100);\n"
+" background-color: rgb(110, 120, 120);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-" background-color: white;\n"
-" color: rgb(65, 77, 77);\n"
+" background-color: rgb(150, 160, 160);;\n"
 " border: 1px solid black;\n"
 "}")
+        self.pushButtonSearch.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("icons/search_white.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonSearch.setIcon(icon)
+        self.pushButtonSearch.setIconSize(QtCore.QSize(20, 20))
         self.pushButtonSearch.setObjectName("pushButtonSearch")
-        self.horizontalLayout.addWidget(self.pushButtonSearch)
-        spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.horizontalLayout.addItem(spacerItem4)
-        self.horizontalLayout.setStretch(0, 1)
-        self.horizontalLayout.setStretch(1, 5)
-        self.horizontalLayout.setStretch(2, 1)
-        self.horizontalLayout.setStretch(3, 1)
-        self.verticalLayout_3.addWidget(self.frameSearch)
+        self.horizontalLayout_4.addWidget(self.pushButtonSearch)
+        self.verticalLayout_6.addWidget(self.frameSearch_2)
+        self.horizontalLayout_3.addWidget(self.frame_6)
+        self.horizontalLayout_3.setStretch(0, 1)
+        self.horizontalLayout_3.setStretch(1, 3)
+        self.verticalLayout_3.addWidget(self.frameTopRight_2)
         self.verticalLayout.addWidget(self.frameTopRight)
         self.tableWidget = QtWidgets.QTableWidget(parent=self.frameRight)
         font = QtGui.QFont()
@@ -279,21 +313,25 @@ class Ui_MainWindow(object):
         self.tableWidget.setColumnCount(4)
         self.tableWidget.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignVCenter)
         font = QtGui.QFont()
         font.setBold(True)
         item.setFont(font)
         self.tableWidget.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignVCenter)
         font = QtGui.QFont()
         font.setBold(True)
         item.setFont(font)
         self.tableWidget.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignVCenter)
         font = QtGui.QFont()
         font.setBold(True)
         item.setFont(font)
         self.tableWidget.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignVCenter)
         font = QtGui.QFont()
         font.setBold(True)
         item.setFont(font)
@@ -317,11 +355,11 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButtonBackMainPage.setText(_translate("MainWindow", "<  Main Page"))
-        self.pushButtonSendMail.setText(_translate("MainWindow", "Send Mail"))
-        self.pushButtonAllEvents.setText(_translate("MainWindow", "All Events"))
+        self.pushButtonSendMail.setText(_translate("MainWindow", "Send  Mail"))
+        self.pushButtonAllEvents.setText(_translate("MainWindow", "All  Events"))
         self.pushButtonExit.setText(_translate("MainWindow", "Exit"))
         self.labelHeader.setText(_translate("MainWindow", "EVENTS"))
-        self.pushButtonSearch.setText(_translate("MainWindow", "Search"))
+        self.lineEditSearch.setPlaceholderText(_translate("MainWindow", "Search"))
         item = self.tableWidget.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "Event"))
         item = self.tableWidget.horizontalHeaderItem(1)

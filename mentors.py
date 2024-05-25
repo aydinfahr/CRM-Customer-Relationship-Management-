@@ -1,6 +1,8 @@
 from PyQt6.QtWidgets import QMainWindow
 from UI_Files.mentors_ui import Ui_MainWindow
+from menu import MenuPage
 import main
+
 
 class MentorsPage(QMainWindow):
     def __init__(self, is_admin):
@@ -10,15 +12,11 @@ class MentorsPage(QMainWindow):
         self.is_admin = is_admin
         self.meetings = None
 
-        self.mentor_window.tableWidget.setColumnWidth(1, 120)
-        self.mentor_window.tableWidget.setColumnWidth(2, 120)
-        self.mentor_window.tableWidget.setColumnWidth(3, 90)
-        self.mentor_window.tableWidget.setColumnWidth(4, 380)
-        self.mentor_window.tableWidget.setColumnWidth(5, 400)
-        self.mentor_window.tableWidget.setColumnWidth(6, 80)
-        self.mentor_window.tableWidget.setColumnWidth(7, 1000)  
+        self.dict_columnwidth = {0:100, 1:120, 2:120, 3:90, 4:380, 5:400, 6:80, 7:1000}
+        self.mentor_window.tableWidget.setColumnCount(10)
+        main.set_column_width(self.mentor_window, self.dict_columnwidth)
 
-        self.mentor_window.pushButtonAllMeetings.clicked.connect(self.print_all_meetings)
+        self.mentor_window.pushButtonAllMeetings.clicked.connect(self.get_all_meetings)
         self.mentor_window.pushButtonSearch.clicked.connect(self.search)
         self.mentor_window.lineEditSearch.returnPressed.connect(self.search)
         self.mentor_window.comboBox.currentIndexChanged.connect(self.filter_table)
@@ -27,23 +25,21 @@ class MentorsPage(QMainWindow):
   
 
     def load_file(self):
-        self.meetings = main.connect_spreadsheet("Mentor")
+        if self.meetings is None:
+            self.meetings = main.connect_spreadsheet("Mentor")
                 
+    def get_all_meetings(self):
+        self.load_file()
 
-    def print_all_meetings(self):
-        if self.meetings == None:     
-            self.load_file()
-        main.print_table(self.mentor_window, self.meetings)  
+        main.print_table(self.mentor_window, self.meetings[1:])  
 
     def search(self):
+        self.load_file()
         input_text = self.mentor_window.lineEditSearch.text().lower()
         if input_text == '':
             self.mentor_window.lineEditSearch.setPlaceholderText("Enter the text to search!")
-            return
-        if self.meetings == None:     
-            self.load_file()
-
-        search_result = [[]]
+            return     
+        search_result = []
         for row in self.meetings[1:]:       
             applicant = row[1].lower().split()
             mentor = row[2].lower().split()
@@ -56,10 +52,9 @@ class MentorsPage(QMainWindow):
         main.print_table(self.mentor_window, search_result)
 
     def filter_table(self):
-        if self.meetings == None:
-             self.load_file()
+        self.load_file()
         selected_item = self.mentor_window.comboBox.currentText()
-        filtered_table = [[]]
+        filtered_table = []
         for row in self.meetings[1:]:
             if selected_item.lower().strip() == row[4].lower().strip():
                 filtered_table.append(row)
@@ -67,8 +62,6 @@ class MentorsPage(QMainWindow):
 
 
     def back_menu(self):
-        from menu import MenuPage
-        
         self.open_menu_window = MenuPage(self.is_admin)  
         self.hide()
         self.open_menu_window.show()

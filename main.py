@@ -1,3 +1,4 @@
+
 from PyQt6.QtWidgets import QApplication, QTableWidgetItem
 import gspread
 
@@ -9,14 +10,17 @@ def connect_spreadsheet(file):
     items = worksheet.get_all_values()
     return items
 
-def print_table(window, table):
+def set_column_width(window, dict_columnwidth):
+    for i, width in dict_columnwidth.items():
+        window.tableWidget.setColumnWidth(i, width)
 
+def print_table(window, file):
     table_widget = window.tableWidget
     table_widget.clearContents()
-    table_widget.setRowCount(len(table)-1)
-
+    table_widget.setRowCount(len(file))
+    
     row_index = 0
-    for row in table[1:]:
+    for row in file:
         column_index = 0
         for column in row:
             item = QTableWidgetItem(str(column))
@@ -25,14 +29,13 @@ def print_table(window, table):
         row_index += 1
                 
                  
-
-
-if __name__ == '__main__':
+def main():
     from login import LoginPage
     app = QApplication([])
     login_window = LoginPage()
     login_window.show()
-    login_window.users = connect_spreadsheet("Kullanicilar")  ##Simdilik burada dursun
+    login_window.users = connect_spreadsheet("Kullanicilar")  
     app.exec()
     
-
+if __name__ == "__main__":
+    main()

@@ -78,7 +78,6 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-" \n"
 " background-color: rgb(90, 100, 100);\n"
 "}\n"
 "\n"
@@ -250,25 +249,20 @@ class Ui_MainWindow(object):
         self.pushButtonSearch.setStyleSheet("\n"
 "\n"
 "QPushButton {\n"
-"\n"
-"\n"
 " background-color: rgb(80, 90, 90);\n"
-"\n"
 " border-bottom-right-radius: 10px;\n"
 " border-top-right-radius: 10px;\n"
 " padding-right: 5px;\n"
 " border: 1px solid rgb(50, 60, 60);\n"
-" border-left: none;\n"
+" border-left:none;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-" \n"
-" background-color: rgb(100, 110, 110);\n"
+" background-color: rgb(110, 120, 120);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-" background-color: rgb(150, 160, 160);\n"
-" \n"
+" background-color: rgb(150, 160, 160);;\n"
 " border: 1px solid black;\n"
 "}")
         self.pushButtonSearch.setText("")
@@ -295,7 +289,6 @@ class Ui_MainWindow(object):
 "border-color: black;\n"
 "}")
         self.comboBox.setObjectName("comboBox")
-        self.comboBox.setPlaceholderText("Filter according to...")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.comboBox.addItem("")

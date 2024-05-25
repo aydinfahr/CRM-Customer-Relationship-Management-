@@ -49,21 +49,21 @@ class Ui_MainWindow(object):
         self.frame_6.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_6.setObjectName("frame_6")
         self.label_5 = QtWidgets.QLabel(parent=self.frame_6)
-        self.label_5.setGeometry(QtCore.QRect(0, 10, 521, 31))
+        self.label_5.setGeometry(QtCore.QRect(0, 0, 521, 31))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.label_5.setFont(font)
-        self.label_5.setIndent(30)
+        self.label_5.setIndent(37)
         self.label_5.setObjectName("label_5")
         self.lineEditUsername = QtWidgets.QLineEdit(parent=self.frame_6)
-        self.lineEditUsername.setGeometry(QtCore.QRect(30, 40, 460, 40))
+        self.lineEditUsername.setGeometry(QtCore.QRect(30, 30, 460, 40))
         self.lineEditUsername.setMinimumSize(QtCore.QSize(460, 40))
         self.lineEditUsername.setMaximumSize(QtCore.QSize(460, 40))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.lineEditUsername.setFont(font)
         self.lineEditUsername.setStyleSheet("QLineEdit{\n"
-" padding: 10px;\n"
+" padding-left: 10px;\n"
 " border: 1px solid;\n"
 " border-radius: 10px;\n"
 " border-color: gray;\n"
@@ -87,21 +87,21 @@ class Ui_MainWindow(object):
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_5.setObjectName("frame_5")
         self.label_4 = QtWidgets.QLabel(parent=self.frame_5)
-        self.label_4.setGeometry(QtCore.QRect(0, 10, 521, 31))
+        self.label_4.setGeometry(QtCore.QRect(0, 0, 521, 31))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.label_4.setFont(font)
-        self.label_4.setIndent(30)
+        self.label_4.setIndent(37)
         self.label_4.setObjectName("label_4")
         self.lineEditPassword = QtWidgets.QLineEdit(parent=self.frame_5)
-        self.lineEditPassword.setGeometry(QtCore.QRect(30, 40, 460, 40))
+        self.lineEditPassword.setGeometry(QtCore.QRect(30, 30, 460, 40))
         self.lineEditPassword.setMinimumSize(QtCore.QSize(460, 40))
         self.lineEditPassword.setMaximumSize(QtCore.QSize(460, 40))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.lineEditPassword.setFont(font)
         self.lineEditPassword.setStyleSheet("QLineEdit{\n"
-" padding: 10px;\n"
+" padding-left: 10px;\n"
 " border: 1px solid;\n"
 " border-radius: 10px;\n"
 " border-color: gray;\n"
@@ -117,6 +117,11 @@ class Ui_MainWindow(object):
 "}")
         self.lineEditPassword.setEchoMode(QtWidgets.QLineEdit.EchoMode.Password)
         self.lineEditPassword.setObjectName("lineEditPassword")
+        self.checkBox = QtWidgets.QCheckBox(parent=self.frame_5)
+        self.checkBox.setGeometry(QtCore.QRect(40, 80, 131, 20))
+        self.checkBox.setStyleSheet("color: rgb(60, 70, 70);\n"
+"")
+        self.checkBox.setObjectName("checkBox")
         self.frame_2 = QtWidgets.QFrame(parent=self.groupBox)
         self.frame_2.setGeometry(QtCore.QRect(0, 390, 521, 121))
         self.frame_2.setMinimumSize(QtCore.QSize(521, 121))
@@ -152,7 +157,7 @@ class Ui_MainWindow(object):
 "")
         self.pushButtonLogin.setObjectName("pushButtonLogin")
         self.labelErrorMessage = QtWidgets.QLabel(parent=self.groupBox)
-        self.labelErrorMessage.setGeometry(QtCore.QRect(30, 170, 461, 31))
+        self.labelErrorMessage.setGeometry(QtCore.QRect(30, 160, 461, 31))
         self.labelErrorMessage.setStyleSheet("color: rgb(255, 0, 0);\n"
 "")
         self.labelErrorMessage.setText("")
@@ -176,6 +181,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label_5.setText(_translate("MainWindow", "Username"))
         self.label_4.setText(_translate("MainWindow", "Password"))
+        self.checkBox.setText(_translate("MainWindow", "Show Password"))
         self.pushButtonLogin.setText(_translate("MainWindow", "Log In"))
 
 

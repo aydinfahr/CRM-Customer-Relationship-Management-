@@ -1,1 +1,0 @@
-pyuic6 -x mentor_menu.ui -o mentors_ui.py

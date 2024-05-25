@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'main_menu_admin.ui'
+# Form implementation generated from reading ui file 'main_menu.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #
@@ -12,8 +12,8 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(467, 550)
-        MainWindow.setMinimumSize(QtCore.QSize(400, 550))
+        MainWindow.resize(700, 550)
+        MainWindow.setMinimumSize(QtCore.QSize(650, 550))
         MainWindow.setStyleSheet("QMainWindow{\n"
 " \n"
 "    background-color: rgb(240, 240, 240);\n"
@@ -58,6 +58,7 @@ class Ui_MainWindow(object):
         self.labelLogo = QtWidgets.QLabel(parent=self.frameTopLeft)
         self.labelLogo.setMinimumSize(QtCore.QSize(221, 61))
         self.labelLogo.setMaximumSize(QtCore.QSize(221, 61))
+        self.labelLogo.setStyleSheet("")
         self.labelLogo.setText("")
         self.labelLogo.setPixmap(QtGui.QPixmap("icons/logoPhoto.png"))
         self.labelLogo.setScaledContents(True)
@@ -74,6 +75,7 @@ class Ui_MainWindow(object):
         self.pushButtonInterviews = QtWidgets.QPushButton(parent=self.frameMenu)
         self.pushButtonInterviews.setGeometry(QtCore.QRect(10, 170, 191, 31))
         font = QtGui.QFont()
+        font.setFamily("Arial Rounded MT Bold")
         font.setPointSize(11)
         font.setBold(False)
         self.pushButtonInterviews.setFont(font)
@@ -81,10 +83,10 @@ class Ui_MainWindow(object):
 "background-color: rgb(65, 77, 77);\n"
 "color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
+"letter-spacing: 0.5em;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-" \n"
 " background-color: rgb(90, 100, 100);\n"
 "}\n"
 "\n"
@@ -97,6 +99,7 @@ class Ui_MainWindow(object):
         self.pushButtonApplications = QtWidgets.QPushButton(parent=self.frameMenu)
         self.pushButtonApplications.setGeometry(QtCore.QRect(10, 50, 191, 31))
         font = QtGui.QFont()
+        font.setFamily("Arial Rounded MT Bold")
         font.setPointSize(11)
         font.setBold(False)
         self.pushButtonApplications.setFont(font)
@@ -104,10 +107,10 @@ class Ui_MainWindow(object):
 "background-color: rgb(65, 77, 77);\n"
 "color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
+"letter-spacing: 0.3em;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-" \n"
 " background-color: rgb(90, 100, 100);\n"
 "}\n"
 "\n"
@@ -120,6 +123,7 @@ class Ui_MainWindow(object):
         self.pushButtonMentorMeetings = QtWidgets.QPushButton(parent=self.frameMenu)
         self.pushButtonMentorMeetings.setGeometry(QtCore.QRect(10, 110, 191, 31))
         font = QtGui.QFont()
+        font.setFamily("Arial Rounded MT Bold")
         font.setPointSize(11)
         font.setBold(False)
         self.pushButtonMentorMeetings.setFont(font)
@@ -127,10 +131,10 @@ class Ui_MainWindow(object):
 "background-color: rgb(65, 77, 77);\n"
 "color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
+"letter-spacing: 0.2em;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-" \n"
 " background-color: rgb(90, 100, 100);\n"
 "}\n"
 "\n"
@@ -155,6 +159,7 @@ class Ui_MainWindow(object):
         self.pushButtonAdminMenu = QtWidgets.QPushButton(parent=self.frameMenu)
         self.pushButtonAdminMenu.setGeometry(QtCore.QRect(10, 230, 191, 31))
         font = QtGui.QFont()
+        font.setFamily("Arial Rounded MT Bold")
         font.setPointSize(11)
         font.setBold(False)
         self.pushButtonAdminMenu.setFont(font)
@@ -162,10 +167,10 @@ class Ui_MainWindow(object):
 "background-color: rgb(65, 77, 77);\n"
 "color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
+"letter-spacing: 0.2em;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-" \n"
 " background-color: rgb(90, 100, 100);\n"
 "}\n"
 "\n"
@@ -188,13 +193,15 @@ class Ui_MainWindow(object):
         self.pushButtonExit.setMinimumSize(QtCore.QSize(101, 31))
         self.pushButtonExit.setMaximumSize(QtCore.QSize(101, 31))
         font = QtGui.QFont()
+        font.setFamily("Arial Rounded MT Bold")
         font.setPointSize(11)
-        font.setBold(True)
+        font.setBold(False)
         self.pushButtonExit.setFont(font)
         self.pushButtonExit.setStyleSheet("QPushButton{\n"
 " background-color: rgb(148, 0, 0);\n"
 " color: rgb(255, 255, 255);\n"
 " border-radius: 10px;\n"
+"letter-spacing: 0.3em;\n"
 "}\n"
 "QPushButton:hover {\n"
 "  background-color: rgba(157, 9, 19,200);\n"
@@ -215,19 +222,26 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.frameLeft)
         self.frameRight = QtWidgets.QFrame(parent=self.mainFrame)
         self.frameRight.setMinimumSize(QtCore.QSize(0, 0))
-        self.frameRight.setStyleSheet("background-color: white;")
+        self.frameRight.setStyleSheet("background-color: white;\n"
+"image: url(:/logo/logo_icon_bw.png);")
         self.frameRight.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frameRight.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frameRight.setObjectName("frameRight")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.frameRight)
-        self.verticalLayout.setContentsMargins(0, 0, -1, 0)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
+        self.label_2 = QtWidgets.QLabel(parent=self.frameRight)
+        self.label_2.setText("")
+        self.label_2.setPixmap(QtGui.QPixmap("icons/logo_icon_bw.png"))
+        self.label_2.setScaledContents(True)
+        self.label_2.setObjectName("label_2")
+        self.verticalLayout.addWidget(self.label_2)
         self.horizontalLayout_2.addWidget(self.frameRight)
         self.verticalLayout_2.addWidget(self.mainFrame)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 467, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 700, 22))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
@@ -242,9 +256,9 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButtonInterviews.setText(_translate("MainWindow", "Interviews"))
         self.pushButtonApplications.setText(_translate("MainWindow", " Applications"))
-        self.pushButtonMentorMeetings.setText(_translate("MainWindow", "Mentor Meetings"))
+        self.pushButtonMentorMeetings.setText(_translate("MainWindow", "Mentor  Meetings"))
         self.label.setText(_translate("MainWindow", "MAIN MENU"))
-        self.pushButtonAdminMenu.setText(_translate("MainWindow", "Admin Menu"))
+        self.pushButtonAdminMenu.setText(_translate("MainWindow", "Admin  Menu"))
         self.pushButtonExit.setText(_translate("MainWindow", "Exit"))
 
 
